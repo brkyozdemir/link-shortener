@@ -15,7 +15,7 @@ class ShortUrlTransformer extends TransformerAbstract
             'link' => $shortUrl->link,
             'slug' => $shortUrl->slug,
             'exit_page' => $shortUrl->exit_page,
-            'expiration_time' => $shortUrl->expiration_time->toDateTimeString(),
+            'expiration_time' => $shortUrl->expiration_time,
         ];
     }
 }
