@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 use League\Fractal\Serializer\ArraySerializer;
 
 class CustomSerializer extends ArraySerializer

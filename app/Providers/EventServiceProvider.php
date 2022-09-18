@@ -2,13 +2,18 @@
 
 namespace App\Providers;
 
+use App\ShortUrl\Listeners\Subscribers\ShortUrlEventSubscriber;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
+    protected $subscribe = [
+        // User Related Event Subscribers
+        ShortUrlEventSubscriber::class,
+    ];
+
     /**
      * The event to listener mappings for the application.
      *
